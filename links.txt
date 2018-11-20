@@ -1,0 +1,7 @@
+https://pypi.org/project/iexfinance/
+
+https://iextrading.com/developer/docs/#unofficial-libraries-and-integrations
+
+https://www.oreilly.com/learning/algorithmic-trading-in-less-than-100-lines-of-python-code
+
+https://pandas.pydata.org/pandas-docs/stable/10min.html
