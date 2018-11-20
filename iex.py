@@ -42,7 +42,7 @@ def update_price():
                      # display_time=new_price["processedTime"],
                      # price=new_price["delayedPrice"]), 10000)
     num_price = new_price.loc[0]['delayedPrice']
-    sys.stdout.write("Price of {}: {}\r".format(TICKER, num_price))
+    sys.stdout.write("Price of {} 15 minutes ago: {}\r".format(TICKER, num_price))
     sys.stdout.flush()
     threading.Timer(1, update_price).start()
     # return
