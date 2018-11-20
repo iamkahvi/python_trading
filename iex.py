@@ -4,6 +4,7 @@ python -m bokeh serve iex.py
 '''
 
 
+import sys
 import time
 import threading
 import io
@@ -40,7 +41,9 @@ def update_price():
     # data.stream(dict(time=new_price["delayedPriceTime"],
                      # display_time=new_price["processedTime"],
                      # price=new_price["delayedPrice"]), 10000)
-    print(new_price.loc[0]['delayedPrice'])
+    num_price = new_price.loc[0]['delayedPrice']
+    sys.stdout.write("Price of {}: {}\r".format(TICKER, num_price))
+    sys.stdout.flush()
     threading.Timer(1, update_price).start()
     # return
 
